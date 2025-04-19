@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSSNEKA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://i.ibb.co.com/B5Zwc38m/1000061688-removebg-preview.png" type="image/x-icon">
+</head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+        .box {
+            width: 100%;
+            height: auto;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 5s forwards;
+        }
+        @keyframes fadeIn{
+          to{
+            opacity: 1;
+          }
+        }
+        .fade-in-text {
+          font-size: 2em;
+          opacity: 0;
+          animation:fadeIn 4s forwards;
+        }
+        .animated-box {
+        width: 100px;
+        height: 100px;
+        transition: all 0.3s ease-in-out;
+        }
+        @media (min-width: 600px) {
+            .box {
+                width: calc(50% - 10px);
+                margin: 5px;
+            }
+        }
+        @keyframes moveUpBlur {
+          0%{
+            top: 0;
+            filter: blur(0px);
+          }
+          100%{
+            top: -100px;
+            filter: blur(5px);
+          }
+        }
+        @media (min-width: 900px) {
+            .box {
+                width: calc(33.33% - 10px);
+                margin: 5px;
+            }
+        }
+        header, footer {
+            text-align: center;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+        }
+        .social-links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          transition: transform 0.3s ease-in-out;
+        }
+        .social-links img:hover{
+          transform: scale(1.2);
+        }
+        .menu {
+            width: 0;
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(17, 17, 17, 0.8); 
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .menu a:hover {
+            color: #f1f1f1;
+        }
+        .menu .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .menu-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-btn:hover {
+            transform: scale(1.1);
+        }
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+    </style>
+<body>
+    <header class="fade-in-text" style="position: relative; text-align: center; background-color: blue; padding: 20px; color: white; border-radius: 10px;">
+        <img src="https://i.ibb.co.com/B5Zwc38m/1000061688-removebg-preview.png" style="position: absolute; top: 10px; left: 10px; width: 50px; height: 50px;">
+        <h6 style="margin: 0;">OSSNEKA</h6>
+        <h6 style="margin: 5px 0;">(OSIS SMK Negeri 4 KLATEN)</h6>
+        <h6 style="margin: 5px 0;">Organisasi Siswa Intra Sekolah</h6>
+        <h6 style="margin: 5px 0;">SMK Negeri 4 KLATEN</h6>
+        <img src="https://i.ibb.co.com/9myGZQD4/Whats-App-Image-2024-11-15-at-15-52-03-a4e45878-removebg-preview.png" style="position: absolute; top: 10px; right: 10px; width: 50px; height: 50px;">
+        <button class="menu-btn" onclick="openNav()">☰</button>
+    </header>
+    <div id="mySidenav" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="https://anonymous-1-id.github.io/ossneka">BERANDA</a>
+        <a href="httpa://anonymous-1-id.github.io/anggota">ANGGOTA</a>
+        <a href="https://anonymous-1-id.github.io/progja">PROGJA</a>
+        <a href="https://anonymous-1-id.github.io/pembina">PEMBINA</a>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+    <div class="container">
+        <div class="box" style="position: relative; background-image: url('https://i.ibb.co.com/PzrkFt6n/6219549052396225860-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+            <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
+                <li>
+                    Program Kerja Seksi Bidang keimanan, Akhlak Mulia, dan Ketakwaan
+                </li>
+                <ol>
+                    <li>
+                    Buka bersama (internal osis)
+                    </li>
+                    <li>
+                    Galang dana panti asuhan (bersama ekstra lain)
+                    </li>
+                    <li>
+                    Bunga tabur
+                    </li>
+                    <li>
+                    OWOS (One Week One Surah)
+                    </li>
+                    <li>
+                    Membantu rohis apabila ada event dengan menggunakan pdl osis sebagai perwakilan seksi bidang 1
+                    </li>
+                </ol>      
+            </h6>
+        </div>
+        <!--sekbid 2!-->
+        <div class="box" style="position: relative; background-image: url('https://i.ibb.co.com/JwygzL2Z/6219549052396225858-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+            <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
+                <li>
+                Program Kerja Seksi Bidang Kepribadian Unggul, Wawasan Kebangsaan, dan Bela Negara
+                </li>
+                <ol>
+                <li>
+                    Membuat jadwal menjaga barisan upacara 
+                </li>
+                <li>
+                    Melatih petugas upacara
+                </li>
+                <li>
+                    Mencatat pelanggaran
+                </li>
+                <li>
+                    Event 17 Agustus 
+                </li>
+                <li>
+                    Menghandle Aubade
+                </li>
+                <li>
+                    Memutar lagu Mars SMK N 4 KLATEN dan lagu Nasional setiap jam istirahat
+                </li>
+                </ol>
+            </h6>
+        </div>
+        <!--sekbid 3!-->
+        <div class="box" style="position: relative; background-image: url('https://i.ibb.co.com/3VYK5Vh/6219549052396225859-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+            <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
+            <li>
+                Program kerja Seksi Bidang Prestasi Akademik, Seni, dan Olahraga 
+            </li>
+            <ol>
+                <li>HAORNAS</li>
+                <li>Jum'at sehat</li>
+                <li>Classmeet</li>
+            </ol>
+            </h6>
+        </div>
+        <!--sekbid 4!-->
+        <div class="box" style="position: relative; background-image: url('https://i.ibb.co.com/qYMdCT7c/6219549052396225857-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+            <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
+            <li>
+                Program kerja Seksi Bidang Demokrasi, HAM, Pendidikan Politik, Lingkungan Hidup, Kepekaan, dan Toleransi Sosial 
+            </li>
+            <ol>
+                <li>
+                Memperingati hari pahlawan mengadakan lomba pidato,dan fashion show bertema pahlawan
+                </li>
+                <li>
+                Mengadakan rapat koordinasi antar ekstrakulikuler dan organisasi
+                </li>
+                <li>
+                Upacara hari guru dan mengadakan persembahan dari paduan suara dan siswa siswi untuk menyanyikan hymne guru pertunjukan tari dari ekstrakulikuler,
+                dan mengadakan kategori guru terbaik,terlucu,dan lain-lain
+                </li>
+                <li>
+                Membuat grub chat antar organisasi atau ekstra untuk mempermudah komunikasi
+                </li>
+                <li>
+                SNECAS(Sneka Cristicm and Suggestions)
+                </li>
+                <li>
+                LDKS
+                </li>
+                <li>
+                Demo ekstrakulikuler
+                </li>
+            </ol>
+            </h6>
+        </div>
+        <!--sekbid 5!-->
+        <div class="box" style="position: relative; background-image: url('https://i.ibb.co.com/vv3pVz6Z/6219549052396225867-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+            <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
+            <li>
+                Program kerja Seksi Bidang Kreativitas, Keterampilan, dan Kewirausahaan
+            </li>
+            <ol>
+                <li>Melanjutkan program kerja sebelumnya (jualan di hari valentine)</li>
+                <li>Mencari sponsor tetap</li>
+                <li>Podcast KWU</li>
+                <li>Bazar</li>
+                <li>Feed Instagram</li>
+                <li>Membuat konten jualan yang akan di upload di Instagram KWU OSSNEKA,TikTok OSSNEKA</li>
+                <li>Membuat akun TikTok KWU</li>
+                <li>Membuat ID card dan lanyard OSIS</li>
+                <li>Menjual atribut sekolah</li>
+                <li>Menjual bunga saat event parenting</li>
+                <li>Membuka KWU setiap 2 minggu sekali</li>
+                <li>Mini quiz (siapa cepat medapatkan hadiah)</li>
+                <li>Menjual bunga saat hari Guru</li>
+            </ol>
+            </h6>
+        </div>
+        <!--sekbid 6!-->
+        <div class="box" style="position: relative; background-image: url('https://i.ibb.co.com/60GVB0mL/6219549052396225866-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+            <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
+            <li>
+                Program kerja Seksi Bidang Kualitas Jasmani, Kesehatan, dan Gizi
+            </li>
+            <ol>
+                <li>Renang</li>
+                <li>Jogging</li>
+                <li>Makan sehat bersama</li>
+            </ol>
+            </h6>
+        </div>
+        <!--sekbid 7!-->
+        <div class="box" style="position: relative; background-image: url('https://i.ibb.co.com/7x7hSKGx/6219549052396225863-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+            <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
+            <li>
+                Program kerja Seksi Bidang Sastra, Budaya dan Bahasa 
+            </li>
+            <ol>
+                <li>
+                Bulan Bahasa
+                </li>
+                <li>
+                Hari Kartini
+                </li>
+                <li>
+                Hari Pahlawan
+                </li>
+                <li>
+                Menyanyikan Lagu daerah ketika apel
+                </li>
+                <li>
+                Menyetel musik saat jam istirahat
+                </li>
+                <li>
+                Flashmob
+                </li>
+            </ol>
+            </h6>
+        </div>
+        <!--sekbid 8-->
+        <div class="box" style="  position: relative; background-image: url('https://i.ibb.co.com/Cpzq35Vh/6219549052396225865-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+            <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
+            <li>
+                Program kerja Seksi Bidang Teknologi Informasi dan Komunikasi
+            </li>
+            <ol>
+                <li>
+                Membuat logo seksi bidang
+                </li>
+                <li>
+                Membuat feed instagram kepengurusan beranimasi
+                </li>
+                <li>
+                Membuat design id card + lanyard OSIS
+                </li>
+                <li>
+                Message aspiration
+                </li>
+                <li>
+                Website OSIS
+                </li>
+                <li>
+                Pembuatan pamflet dihari-hari besar
+                </li>
+                <li>
+                Membuat video kesan pesan
+                </li>
+                <li>
+                Membuat video kreatif tiktok atau Instagram
+                </li>
+            </ol>
+            </h6>
+        </div>
+    </div>
+</div>
+    <footer style="background-color:blue">
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@ossneka_" target="_blank">
+                <img src="https://i.ibb.co.com/V0Ftwwvr/th-2-removebg-preview.png" alt="TikTok" width="40" height="40" style="margin-right: 20px;">
+            </a>
+            <a href="https://www.instagram.com/ossneka_" target="_blank">
+                <img src="https://i.ibb.co.com/ZpqR0tfg/ig.png" alt="Instagram" width="30" height="30" style="margin-right: 20px;">
+            </a>
+            <a href="https://www.youtube.com/@OSSNEKA" target="_blank">
+                <img src="https://i.ibb.co.com/Wp6tN19D/th-3-removebg-preview.png" alt="YouTube" width="50" height="50">
+            </a>
+        </div>
+    </footer>
+    <footer>
+        OSSNEKA 2024/2025
+    </footer>
+</body>
+</html>
